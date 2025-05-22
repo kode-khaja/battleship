@@ -1,0 +1,74 @@
+  /* BASE STYLES */
+:root {
+    --clr-dark: #0f172a;
+    --clr-light: #f1f5f9;
+    --clr-accent: #795217;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+}
+
+
+.game-container {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 88vw;
+    gap: 40px;
+}
+
+
+.player1board {
+   display: flex;
+   flex-wrap: wrap;
+   }
+
+   .player2board {
+       display: flex;
+       flex-wrap: wrap;
+       }
+  
+  .item {
+    width: 150px;
+    height: 150px;
+    background-color: #97d5ff;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 1px solid var(--clr-accent);
+    border-radius: 2px;
+  }
+
+  .item2 {
+    width: 150px;
+    height: 150px;
+    background-color: #ffee71;
+    padding: 1em;
+    font-weight: 700;
+    color: var(--clr-light);
+    text-align: center;
+    border: 1px solid var(--clr-accent);
+    border-radius: 2px;
+  }
+
+
+

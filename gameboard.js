@@ -1,4 +1,4 @@
-class Gameboard {
+export default class Gameboard {
     constructor(x, y) {
         this.x = x
         this.y = y
@@ -6,7 +6,7 @@ class Gameboard {
         this.missedShots = []
     }
 
-    
+
 
     placeShip(x, y, length) {
         const ship = new Ship(length);

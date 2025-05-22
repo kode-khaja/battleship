@@ -1,4 +1,4 @@
-import Ship from './battleship.js';
+import Ship from './ship.js';
 
 test ('Should increment by 1 upon call', () => {
       const newShip = new Ship(1);
