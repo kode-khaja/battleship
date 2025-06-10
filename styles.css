@@ -19,56 +19,95 @@
     font-family: "Roboto", sans-serif;
     color: var(--clr-dark);
     background-color: var(--clr-light);
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    /* align-items: center; */
     height: 100vh;
 }
 
+/* h3 {
+  margin-top: 40vh;
+  margin-left: 30px;
+} */
 
-.game-container {
-    margin: 60px;
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    width: 88vw;
-    gap: 40px;
+
+button {
+    background-color: #ffff;
+    color: #000000;
+    font-weight: bolder;
+    border-radius: 4px;
+    border: 1px solid black;
+    height: 32px;
+    width: 100px;
+
+}
+
+.winning-msg {
+  display: block; /* or flex */
+  color: black;   /* or something visible */
+  font-size: 24px;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
-.player1board {
-   display: flex;
-   flex-wrap: wrap;
-   }
 
-   .player2board {
-       display: flex;
-       flex-wrap: wrap;
-       }
+.game-info {
+  margin-top: 100px;
+  margin-right: 10em;
+}
+
+.scoreboard {
+  margin-top: 18vh;
+}
+
+.game-container {
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 40vw;
+    gap: 20px;
+}
+
+
+  .player1board, .player2board {
+    display: grid;
+    grid-template-columns: repeat(8, 36px); /* 8 columns, each 40px wide */
+    grid-gap: .5px; /* small gap between tiles */
+    width: max-content; /* shrink to fit content */
+    margin-bottom: 20px; /* spacing below the board */
+  }
   
-  .item {
-    width: 150px;
-    height: 150px;
-    background-color: #97d5ff;
-    padding: 1em;
-    font-weight: 700;
-    color: var(--clr-light);
-    text-align: center;
-    border: 1px solid var(--clr-accent);
-    border-radius: 2px;
+  .item, .item2 {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #795217; /* brown border */
+    background-color: #97d5ff; /* default blueish background */
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
   }
-
+  
+  /* Different color for player2 tiles */
   .item2 {
-    width: 150px;
-    height: 150px;
-    background-color: #ffee71;
-    padding: 1em;
-    font-weight: 700;
-    color: var(--clr-light);
-    text-align: center;
-    border: 1px solid var(--clr-accent);
-    border-radius: 2px;
+    background-color: #ffee71; /* yellowish */
+  }
+  
+  /* Optional: hover effect */
+  .item:hover, .item2:hover {
+    filter: brightness(0.85);
   }
 
-
-
+  .ship-info {
+    margin-top: 10vh;
+  }
+  
+  /* Color for tiles with ships - overridden inline in JS as green */
+  /* You can add a class instead of inline style if you want */
+  

@@ -3,12 +3,14 @@ export default class Ship {
         this.length = length
         this.hit = 0;
         this.sunk = false
+        this.scored = false
     }
 
     gotHit() {
 
         this.hit++
-        this.isSunk()
+        // this.isSunk() removed this
+
     }
 
     isSunk() {
